@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5D6E78CE-96C7-4697-9716-69EDE52B47EC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DM</RootNamespace>
+    <AssemblyName>DM</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net451\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.118.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.118.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cells.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cells.Designer.cs">
+      <DependentUpon>Cells.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CellsAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CellsAdd.Designer.cs">
+      <DependentUpon>CellsAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globalpars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Globalpars.Designer.cs">
+      <DependentUpon>Globalpars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalparsAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlobalparsAdd.Designer.cs">
+      <DependentUpon>GlobalparsAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts.Designer.cs">
+      <DependentUpon>Layouts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutsAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LayoutsAdd.Designer.cs">
+      <DependentUpon>LayoutsAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Part_hz\AdaptFont.cs" />
+    <Compile Include="Part_hz\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Part_hz\Form2.Designer.cs" />
+    <Compile Include="Part_hz\IOInformationEntity.cs" />
+    <Compile Include="Part_hz\IOInsertData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Part_hz\IOInsertData.Designer.cs" />
+    <Compile Include="Part_hz\LogConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Part_hz\LogConfig.Designer.cs" />
+    <Compile Include="Part_hz\LogInsertOrEditData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Part_hz\LogInsertOrEditData.Designer.cs" />
+    <Compile Include="Part_hz\MonitorPara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Part_hz\MonitorPara.Designer.cs" />
+    <Compile Include="Part_hz\MonitorParaInsertOrEditData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Part_hz\MonitorParaInsertOrEditData.Designer.cs" />
+    <Compile Include="Part_xy\Form_accessories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Part_xy\Form_accessories.Designer.cs" />
+    <Compile Include="Part_xy\Form_AddOrEdit_accessories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Part_xy\Form_AddOrEdit_accessories.Designer.cs" />
+    <Compile Include="Part_xy\Form_AddOrEdit_modules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Part_xy\Form_AddOrEdit_modules.Designer.cs" />
+    <Compile Include="Part_xy\Form_AddorEdit_roleandmodule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Part_xy\Form_AddorEdit_roleandmodule.Designer.cs" />
+    <Compile Include="Part_xy\Form_AddOrEdit_roles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Part_xy\Form_AddOrEdit_roles.Designer.cs" />
+    <Compile Include="Part_xy\Form_AddOrEdit_users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Part_xy\Form_AddOrEdit_users.Designer.cs" />
+    <Compile Include="Part_xy\Form_auth_roleandmodule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Part_xy\Form_auth_roleandmodule.Designer.cs" />
+    <Compile Include="Part_xy\Form_modules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Part_xy\Form_modules.Designer.cs" />
+    <Compile Include="Part_xy\Form_roleandmodule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Part_xy\Form_roleandmodule.Designer.cs" />
+    <Compile Include="Part_xy\Form_roles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Part_xy\Form_roles.Designer.cs" />
+    <Compile Include="Part_xy\Form_users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Part_xy\Form_users.Designer.cs" />
+    <Compile Include="Productlines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productlines.Designer.cs">
+      <DependentUpon>Productlines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductlinesAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductlinesAdd.Designer.cs">
+      <DependentUpon>ProductlinesAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products.Designer.cs">
+      <DependentUpon>Products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductsAdd.Designer.cs">
+      <DependentUpon>ProductsAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scanareas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanareas.Designer.cs">
+      <DependentUpon>Scanareas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScanareasAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScanareasAdd.Designer.cs">
+      <DependentUpon>ScanareasAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sqlite.cs" />
+    <EmbeddedResource Include="Cells.resx">
+      <DependentUpon>Cells.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CellsAdd.resx">
+      <DependentUpon>CellsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Globalpars.resx">
+      <DependentUpon>Globalpars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalparsAdd.resx">
+      <DependentUpon>GlobalparsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts.resx">
+      <DependentUpon>Layouts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayoutsAdd.resx">
+      <DependentUpon>LayoutsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Part_hz\Form2.resx" />
+    <EmbeddedResource Include="Part_hz\IOInsertData.resx" />
+    <EmbeddedResource Include="Part_hz\LogConfig.resx" />
+    <EmbeddedResource Include="Part_hz\LogInsertOrEditData.resx" />
+    <EmbeddedResource Include="Part_hz\MonitorPara.resx" />
+    <EmbeddedResource Include="Part_hz\MonitorParaInsertOrEditData.resx" />
+    <EmbeddedResource Include="Part_xy\Form_accessories.resx" />
+    <EmbeddedResource Include="Part_xy\Form_AddOrEdit_accessories.resx" />
+    <EmbeddedResource Include="Part_xy\Form_AddOrEdit_modules.resx" />
+    <EmbeddedResource Include="Part_xy\Form_AddorEdit_roleandmodule.resx" />
+    <EmbeddedResource Include="Part_xy\Form_AddOrEdit_roles.resx" />
+    <EmbeddedResource Include="Part_xy\Form_AddOrEdit_users.resx" />
+    <EmbeddedResource Include="Part_xy\Form_auth_roleandmodule.resx" />
+    <EmbeddedResource Include="Part_xy\Form_modules.resx" />
+    <EmbeddedResource Include="Part_xy\Form_roleandmodule.resx" />
+    <EmbeddedResource Include="Part_xy\Form_roles.resx" />
+    <EmbeddedResource Include="Part_xy\Form_users.resx" />
+    <EmbeddedResource Include="Productlines.resx">
+      <DependentUpon>Productlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductlinesAdd.resx">
+      <DependentUpon>ProductlinesAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products.resx">
+      <DependentUpon>Products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductsAdd.resx">
+      <DependentUpon>ProductsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Scanareas.resx">
+      <DependentUpon>Scanareas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScanareasAdd.resx">
+      <DependentUpon>ScanareasAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%24this.BackgroundImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groupBox1.BackgroundImage.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

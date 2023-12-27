@@ -1,0 +1,5 @@
+D:\workspace\DM\bin\Debug\DAL.dll.config
+D:\workspace\DM\bin\Debug\DAL.dll
+D:\workspace\DM\bin\Debug\DAL.pdb
+D:\workspace\DM\DAL\obj\Debug\DAL.dll
+D:\workspace\DM\DAL\obj\Debug\DAL.pdb
